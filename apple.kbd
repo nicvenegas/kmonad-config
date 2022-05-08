@@ -13,6 +13,9 @@
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft up
   fn   lctl lalt lmet           spc            rmet ralt left down rght
+
+  ;; Kinesis Freestyle Pro
+  f20  f21  f22
 )
 
 ;;
@@ -47,6 +50,9 @@
   esc  @hra @hrs @hrd @hrf _    _    @hrj @hrk @hrl @hr; _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _
   @fn  _    _    _              _              _    _    _    _    _
+
+  ;; Kinesis Freestyle Pro
+  j    k    l
 )
 
 ;; Also restores j, k, l repeat for vi-style navigation
@@ -57,4 +63,7 @@
   _    _    _    _    _    _    _    j    k    l    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    pgup
   _    _    _    _              _              _    _    home pgdn end
+
+  ;; Kinesis Freestyle Pro
+  _    _    _
 )
