@@ -13,9 +13,6 @@
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft up
   fn   lctl lalt lmet           spc            rmet ralt left down rght
-
-  ;; Kinesis Freestyle Pro
-  f20  f21  f22
 )
 
 ;;
@@ -23,12 +20,13 @@
 ;; 
 ;; Don't use `around` to also emit *fn* as per keymap/template/apple.kbd
 ;; since that causes macOS to handle *fn-h* to show desktop, etc. [1]
-;; *h* is problematic since the `function` layer, below, makes *j*, *k*,
-;; and *l* regular keys to restore key-down repeats for vi-style navigation.
 ;;
 ;; [1]: https://forum.keyboardmaestro.com/t/has-the-globe-fn-key-acquired-new-abilities-in-macos-12/24580
 ;;
-(defalias fn (layer-toggle function))
+(defalias
+  esc (tap-hold 200 esc (layer-toggle function))
+  fn (layer-toggle function))
+
 
 ;; Home row mods (https://precondition.github.io/home-row-mods)
 (defalias
@@ -43,27 +41,32 @@
     hr; (tap-hold-next-release 200 ; rctl)
 )
 
+
 (deflayer default
   _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  esc  @hra @hrs @hrd @hrf _    _    @hrj @hrk @hrl @hr; _    _
+  @esc @hra @hrs @hrd @hrf _    _    @hrj @hrk @hrl @hr; _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _
   @fn  _    _    _              _              _    _    _    _    _
-
-  ;; Kinesis Freestyle Pro
-  j    k    l
 )
 
-;; Also restores j, k, l repeat for vi-style navigation
+;;
+;; Mix of default fn behaviour from Apple Keyboards and an extend layer [1]
+;;
+;; [1]: https://dreymar.colemak.org/layers-extend.html
+;;
+
+(defalias
+  bck M-[
+  fwd M-]
+)
+
 (deflayer function
-  _    brdn brup mctl _    _    _    prev pp   next mute vold volu
+  caps brdn brup mctl _    _    _    prev pp   next mute vold volu
   _    _    _    _    _    _    _    _    _    _    _    _    _    del
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    j    k    l    _    _    _
+  _    _    _    @bck @fwd _    pgup home up   end  del  _    _    _
+  _    lctl lalt lmet lsft _    pgdn left down rght bspc _    _
   _    _    _    _    _    _    _    _    _    _    _    _    pgup
   _    _    _    _              _              _    _    home pgdn end
-
-  ;; Kinesis Freestyle Pro
-  _    _    _
 )
