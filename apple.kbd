@@ -30,15 +30,15 @@
 
 ;; Home row mods (https://precondition.github.io/home-row-mods)
 (defalias
-    hra (tap-hold-next-release 200 a lctl)
-    hrs (tap-hold-next-release 200 s lalt)
-    hrd (tap-hold-next-release 200 d lmet)
-    hrf (tap-hold-next-release 200 f lsft)
+  hra (tap-hold-next-release 200 a lctl)
+  hrs (tap-hold-next-release 200 s lalt)
+  hrd (tap-hold-next-release 200 d lmet)
+  hrf (tap-hold-next-release 200 f lsft)
 
-    hrj (tap-hold-next-release 200 j rsft)
-    hrk (tap-hold-next-release 200 k rmet)
-    hrl (tap-hold-next-release 200 l lalt)
-    hr; (tap-hold-next-release 200 ; rctl)
+  hrj (tap-hold-next-release 200 j rsft)
+  hrk (tap-hold-next-release 200 k rmet)
+  hrl (tap-hold-next-release 200 l lalt)
+  hr; (tap-hold-next-release 200 ; rctl)
 )
 
 
