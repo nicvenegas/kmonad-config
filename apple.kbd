@@ -1,6 +1,11 @@
 ;; Based on keymap/template/apple.kbd
 
 (defcfg
+  ;; Override iokit-name as follows
+  ;;
+  ;; sudo kmonad --input "iokit-name 'Magic Keyboard'" apple.kbd
+  ;;
+  ;; See https://github.com/kmonad/kmonad/issues/156#issuecomment-748485220
   input (iokit-name "Apple Internal Keyboard / Trackpad")
   output (kext)
   fallthrough true
@@ -48,7 +53,7 @@
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   @esc @hra @hrs @hrd @hrf _    _    @hrj @hrk @hrl @hr; _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _
-  @fn  _    _    _              _              _    _    _    _    _
+  @fn  _    _    _              _              @fn  _    _    _    _
 )
 
 ;;
@@ -60,6 +65,10 @@
 (defalias
   bck M-[
   fwd M-]
+  udo M-z
+  cut M-x
+  cpy M-c
+  pst M-v
 )
 
 (deflayer function
@@ -67,6 +76,6 @@
   _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
   _    _    _    @bck @fwd _    pgup home up   end  del  _    _    _
   _    lctl lalt lmet lsft _    pgdn left down rght bspc _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    pgup
+  _    @udo @cut @cpy @pst _    _    _    _    _    _    _    pgup
   _    _    _    _              _              _    _    home pgdn end
 )
