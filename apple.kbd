@@ -3,7 +3,7 @@
 (defcfg
   ;; Override iokit-name as follows
   ;;
-  ;; sudo kmonad --input "iokit-name 'Magic Keyboard'" apple.kbd
+  ;;     kmonad --input "iokit-name 'Magic Keyboard'" apple.kbd
   ;;
   ;; See https://github.com/kmonad/kmonad/issues/156#issuecomment-748485220
   input (iokit-name "Apple Internal Keyboard / Trackpad")
@@ -38,7 +38,7 @@
 )
 
 (deflayer default
-  _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+  _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   esc  @hra @hrs @hrd @hrf _    _    @hrj @hrk @hrl @hr; _    _
@@ -65,23 +65,18 @@
   cpy M-c
   pst M-v
 
+  ;; Left hand affordances
   cq M-q
   cw M-w
   ct M-t
   cg M-g
-  cb M-b
-  cn M-n
-  cm M-m
-  c, M-,
-  c. M-.
-  c/ M-/
 )
 
 (deflayer extend
   _    _    _    _    _    _    _    _    _    _    _    _    _
   _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
-  mctl @cq  @cw  @bck @fwd @ct  pgup home up   end  del  _    _    _
+  _    @cq  @cw  @bck @fwd @ct  pgup home up   end  del  _    _    _
   _    lctl lalt lmet lsft @cg  pgdn left down rght bspc _    _
-  _    @udo @cut @cpy @pst @cb  @cn  @cm  @c,  @c.  @c/  _    _
+  _    @udo @cut @cpy @pst _    _    _    _    _    _    _    _
   _    _    _    _              _              _    _    _    _    _
  )
