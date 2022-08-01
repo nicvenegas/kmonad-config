@@ -2,11 +2,13 @@
 
 CONFIGDIR="${HOME}/Code/kmonad-config"
 PLUGINSDIR="${HOME}/Library/Application Support/xbar/plugins"
+SLEEP=0.3
 
 script="${PLUGINSDIR}/$(basename $0)"
-opts="shell='${script}' | terminal=true"
+opts="shell='${script}' | terminal=true | refresh=true"
 
 if [[ -z "$1" ]]; then
+  sleep "${SLEEP}"
   echo "⌃⌥⌘⇧"
   echo "---"
   echo "Apple Internal Keyboard / Trackpad | ${opts} | param1=apple"
@@ -24,10 +26,10 @@ fi
 
 
 sudo pkill kmonad
-sleep 1
+sleep "${SLEEP}"
 
 case $1 in
-  apple) sudo kmonad "${CONFIGDIR}/apple.kbd" & ;;
-  kinesis) sudo kmonad "${CONFIGDIR}/kinesis.kbd" & ;;
-  magic-keyboard) sudo kmonad --input 'iokit-name "Magic Keyboard"' "${CONFIGDIR}/apple.kbd" & ;;
+  apple) sudo kmonad --start-delay 0 "${CONFIGDIR}/apple.kbd" & ;;
+  kinesis) sudo kmonad --start-delay 0 "${CONFIGDIR}/kinesis.kbd" & ;;
+  magic-keyboard) sudo kmonad --start-delay 0 --input 'iokit-name "Magic Keyboard"' "${CONFIGDIR}/apple.kbd" & ;;
 esac
