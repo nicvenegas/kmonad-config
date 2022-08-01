@@ -29,5 +29,5 @@ sleep 1
 case $1 in
   apple) sudo kmonad "${CONFIGDIR}/apple.kbd" & ;;
   kinesis) sudo kmonad "${CONFIGDIR}/kinesis.kbd" & ;;
-  magic-keyboard) sudo kmonad --input "iokit-name 'Magic Keyboard'" "${CONFIGDIR}/apple.kbd" & ;;
+  magic-keyboard) sudo kmonad --input 'iokit-name "Magic Keyboard"' "${CONFIGDIR}/apple.kbd" & ;;
 esac
