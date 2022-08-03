@@ -1,5 +1,5 @@
 CONFIGS := apple.kbd magic-keyboard.kbd
-PLUGIN = ${HOME}/Library/Application\ Support/xbar/plugins/KMonad.1m.sh
+PLUGIN := ${HOME}/Library/Application\ Support/xbar/plugins/KMonad.1m.sh
 
 all: $(CONFIGS) $(PLUGIN)
 
@@ -13,7 +13,6 @@ magic-keyboard.kbd:
 
 $(PLUGIN): xbar/KMonad.sh
 	cp "$<" "$@"
-	chmod u+x "$@"
 
 clean:
 	rm $(CONFIGS)
