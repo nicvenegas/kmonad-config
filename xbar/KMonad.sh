@@ -4,7 +4,7 @@ CONFIGDIR="${HOME}/Code/kmonad-config"
 PLUGINSDIR="${HOME}/Library/Application Support/xbar/plugins"
 SLEEP=1
 
-opts="shell='${PLUGINSDIR}/$(basename $0)' | terminal=true | refresh=true"
+opts="shell='${PLUGINSDIR}/$(basename "$0")' | terminal=true | refresh=true"
 
 if [[ -z "$1" ]]; then
   sleep "${SLEEP}"

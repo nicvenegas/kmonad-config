@@ -1,5 +1,6 @@
 CONFIGS := apple.kbd magic-keyboard.kbd
 PLUGIN := ${HOME}/Library/Application\ Support/xbar/plugins/KMonad.1m.sh
+PLUGINSRC := xbar/KMonad.sh
 
 all: $(CONFIGS) $(PLUGIN)
 
@@ -11,9 +12,12 @@ apple.kbd:
 magic-keyboard.kbd:
 	m4 -D __NAME__='Magic Keyboard' "$<" > "$@"
 
-$(PLUGIN): xbar/KMonad.sh
+$(PLUGIN): $(PLUGINSRC)
 	cp "$<" "$@"
 
 clean:
 	rm $(CONFIGS)
 	rm $(PLUGIN)
+
+lint:
+	shellcheck "$(PLUGINSRC)"
