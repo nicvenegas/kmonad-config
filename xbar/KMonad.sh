@@ -11,26 +11,22 @@ if [[ -z "$1" ]]; then
   echo "⌃⌥⌘⇧"
   echo "---"
 
-  runinfo=$(pgrep -lf 'sudo kmonad')
-  case $runinfo in
+  config=$(pgrep -lf 'sudo kmonad' | cut -w -f 6)
+  case $config in
     *apple*) echo "Apple Internal Keyboard / Trackpad ✓" ;;
     *)       echo "Apple Internal Keyboard / Trackpad | ${opts} | param1=apple" ;;
   esac
-  case $runinfo in
+  case $config in
     *kinesis*) echo "Kinesis Freestyle Pro ✓" ;;
     *)         echo "Kinesis Freestyle Pro | ${opts} | param1=kinesis" ;;
   esac
-  case $runinfo in
+  case $config in
     *magic-keyboard*) echo "Magic Keyboard ✓" ;;
     *)                echo "Magic Keyboard | ${opts} | param1=magic-keyboard" ;;
   esac
 
   echo "---"
-  if [[ -z "${runinfo}" ]]; then
-    echo "Kill"
-  else
-    echo "Kill | ${opts} | param1=kill"
-  fi
+  echo "Kill" "${config:+| ${opts} | param1=kill}"
 
   exit 0
 fi
