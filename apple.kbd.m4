@@ -24,6 +24,7 @@
 (defalias
   fn (around (layer-toggle function) fn)
   ext (layer-toggle extend)
+  cag (around lctl (around lalt lmet))
 
   ;; Home row mods (https://precondition.github.io/home-row-mods)
   hra (tap-hold-next-release 200 a lctl)
@@ -43,7 +44,7 @@
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   esc  @hra @hrs @hrd @hrf _    _    @hrj @hrk @hrl @hr; _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _
-  @fn  _    _    @ext           _              _    _    _    _    _
+  @fn  _    _    @ext           _              @cag  _    _    _    _
 )
 
 (deflayer function
