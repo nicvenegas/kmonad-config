@@ -78,6 +78,6 @@
   _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
   _    @cq  @cw  @bck @fwd @ct  pgup home up   end  del  _    _    _
   _    lctl lalt lmet lsft @cg  pgdn left down rght bspc _    _
-  _    @udo @cut @cpy @pst _    _    _    _    _    _    _    _
-  _    _    _    _              _              _    _    _    _    _
+  _    @udo @cut @cpy @pst _    _    _    _    _    _    _    f16
+  _    _    _    _              _              _    _    f18  f17  f19
  )
