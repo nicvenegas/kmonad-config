@@ -11,6 +11,7 @@
   rctl a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft up
   lctl lalt lmet                spc            rmet ralt left down rght
+  ins
 )
 
 ;; Home row mods (https://precondition.github.io/home-row-mods)
@@ -33,4 +34,5 @@
   esc  @hra @hrs @hrd @hrf _    _    @hrj @hrk @hrl @hr; _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _                   _              _    _    _    _    _
+  fn
 )
