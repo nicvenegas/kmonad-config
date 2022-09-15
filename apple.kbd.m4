@@ -44,7 +44,7 @@
   _    q    w    f    p    b    j    l    u    y    ;    _    _    _
   esc  @hra @hrr @hrs @hrt g    m    @hrn @hre @hri @hro _    _
   z    x    c    d    v    \    k    h    _    _    _    _    _
-  @fn  _    _    @ext           _              @cag  _    _    _    _
+  @fn  _    _    @ext           _              @cag  @cag  _    _    _
 )
 
 (deflayer function
@@ -77,6 +77,6 @@
   _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
   _    @cq  @cw  @bck @fwd _    pgup home up   end  del  _    _    _
   _    lctl lalt lmet lsft @cg  pgdn left down rght bspc _    _
-  _    @udo @cut @cpy @pst _    _    _    _    _    _    _    f16
-  _    _    _    _              _              _    _    f18  f17  f19
+  _    @udo @cut @cpy @pst _    _    _    _    _    _    _    _
+  _    _    _    _              _              _    _    _    _    _
  )
