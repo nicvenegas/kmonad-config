@@ -28,22 +28,22 @@
 
   ;; Home row mods (https://precondition.github.io/home-row-mods)
   hra (tap-hold-next-release 200 a lctl)
-  hrs (tap-hold-next-release 200 s lalt)
-  hrd (tap-hold-next-release 200 d lmet)
-  hrf (tap-hold-next-release 200 f lsft)
+  hrr (tap-hold-next-release 200 r lalt)
+  hrs (tap-hold-next-release 200 s lmet)
+  hrt (tap-hold-next-release 200 t lsft)
 
-  hrj (tap-hold-next-release 200 j rsft)
-  hrk (tap-hold-next-release 200 k rmet)
-  hrl (tap-hold-next-release 200 l lalt)
-  hr; (tap-hold-next-release 200 ; rctl)
+  hrn (tap-hold-next-release 200 n rsft)
+  hre (tap-hold-next-release 200 e rmet)
+  hri (tap-hold-next-release 200 i lalt)
+  hro (tap-hold-next-release 200 o rctl)
 )
 
 (deflayer default
   _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  esc  @hra @hrs @hrd @hrf _    _    @hrj @hrk @hrl @hr; _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    q    w    f    p    b    j    l    u    y    ;    _    _    _
+  esc  @hra @hrr @hrs @hrt g    m    @hrn @hre @hri @hro _    _
+  z    x    c    d    v    \    k    h    _    _    _    _    _
   @fn  _    _    @ext           _              @cag  _    _    _    _
 )
 
@@ -69,14 +69,13 @@
   ;; Left hand affordances
   cq M-q
   cw M-w
-  ct M-t
   cg M-g
 )
 
 (deflayer extend
   _    _    _    _    _    _    _    _    _    _    _    _    _
   _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
-  _    @cq  @cw  @bck @fwd @ct  pgup home up   end  del  _    _    _
+  _    @cq  @cw  @bck @fwd _    pgup home up   end  del  _    _    _
   _    lctl lalt lmet lsft @cg  pgdn left down rght bspc _    _
   _    @udo @cut @cpy @pst _    _    _    _    _    _    _    f16
   _    _    _    _              _              _    _    f18  f17  f19
