@@ -17,10 +17,6 @@ if [[ -z "$1" ]]; then
     *)       echo "Apple Internal Keyboard / Trackpad | ${opts} | param1=apple" ;;
   esac
   case $config in
-    *kinesis*) echo "Kinesis Freestyle Pro ✓" ;;
-    *)         echo "Kinesis Freestyle Pro | ${opts} | param1=kinesis" ;;
-  esac
-  case $config in
     *magic-keyboard*) echo "Magic Keyboard ✓" ;;
     *)                echo "Magic Keyboard | ${opts} | param1=magic-keyboard" ;;
   esac
