@@ -24,6 +24,10 @@ if [[ -z "$1" ]]; then
     *magic-keyboard*) echo "Magic Keyboard ✓" ;;
     *)                echo "Magic Keyboard | ${opts} | param1=magic-keyboard" ;;
   esac
+  case $config in
+    *moonlander*) echo "Moonlander ✓" ;;
+    *)                echo "Moonlander | ${opts} | param1=moonlander" ;;
+  esac
 
   echo "---"
   echo "Kill" "${config:+| ${opts} | param1=kill}"

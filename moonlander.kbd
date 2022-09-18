@@ -1,0 +1,13 @@
+(defcfg
+  input (iokit-name "Moonlander Mark I")
+  output (kext)
+  fallthrough true
+)
+
+(defsrc
+  ins
+)
+
+(deflayer default
+  fn
+)
