@@ -8,9 +8,11 @@ $(CONFIGS): apple.kbd.m4
 
 apple.kbd:
 	m4 -D __NAME__='Apple Internal Keyboard / Trackpad' "$<" > "$@"
+	kmonad --dry-run "$@"
 
 magic-keyboard.kbd:
 	m4 -D __NAME__='Magic Keyboard' "$<" > "$@"
+	kmonad --dry-run "$@"
 
 $(PLUGIN): $(PLUGINSRC)
 	cp "$<" "$@"
