@@ -24,7 +24,7 @@
 (defalias
   fn (around (layer-toggle function) fn)
   ext (layer-toggle extend)
-  cag (around lctl (around lalt lmet))
+  sym (layer-toggle symbols)
 
   ;; Home row mods (https://precondition.github.io/home-row-mods)
   hra (tap-hold-next-release 200 a lctl)
@@ -43,15 +43,15 @@
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    q    w    f    p    b    j    l    u    y    ;    _    _    _
   esc  @hra @hrr @hrs @hrt g    m    @hrn @hre @hri @hro _    _
-  z    x    c    d    v    \    k    h    _    _    _    _    _
-  @fn  _    _    @ext           _              @cag  @cag  _    _    _
+  z    x    c    d    v    XX   k    h    _    _    _    _    _
+  @fn  _    _    @sym           _              @ext _    _    _    _
 )
 
 (deflayer function
   _    brdn brup mctl _    _    _    prev pp   next mute vold volu
   _    _    _    _    _    _    _    _    _    _    _    _    _    del
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  caps    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    pgup
   _    _    _    _              _              _    _    home pgdn end
 )
@@ -61,22 +61,34 @@
   ;; Extend layer (https://dreymar.colemak.org/layers-extend.html)
   bck M-[
   fwd M-]
-  udo M-z
-  cut M-x
-  cpy M-c
-  pst M-v
-
-  ;; Left hand affordances
-  cq M-q
-  cw M-w
-  cg M-g
 )
 
 (deflayer extend
   _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
-  _    @cq  @cw  @bck @fwd _    pgup home up   end  del  _    _    _
-  _    lctl lalt lmet lsft @cg  pgdn left down rght bspc _    _
-  _    @udo @cut @cpy @pst _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    f1   f2   f3   f4   _    pgup home up   end  del  _    _    _
+  _    lctl lalt lmet lsft @bck pgdn left down rght bspc _    _
+  f5   f6   f7   f8   @fwd XX   _    f9   f10  f11  f12  _    _
   _    _    _    _              _              _    _    _    _    _
  )
+
+(defalias
+  heq (tap-hold-next-release 200 = lctl)
+  has (tap-hold-next-release 200 * lalt)
+  hob (tap-hold-next-release 200 { lmet)
+  hop (tap-hold-next-release 200 S-9 lsft)
+
+  h4 (tap-hold-next-release 200 4 rsft)
+  h5 (tap-hold-next-release 200 5 rmet)
+  h6 (tap-hold-next-release 200 6 lalt)
+  hdq (tap-hold-next-release 200 " rctl)
+)
+
+(deflayer symbols
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  grv  !    @    #    $    %    ^    7    8    9    '    _    _    _
+  ~    @heq @has @hob @hop [    -    @h4  @h5  @h6  @hdq _    _
+  +    &    }    S-0  ]    XX   S--  1    2    3    \    |    _
+  _    _    _    _              _              0    _    _    _    _
+)
