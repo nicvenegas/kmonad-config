@@ -22,33 +22,44 @@
 
 
 (defalias
+  esc (tap-hold-next-release 200 esc lctl)
   fn (around (layer-toggle function) fn)
+  sym (tap-hold-next-release 200 spc (layer-toggle symbols))
   ext (layer-toggle extend)
-  sym (layer-toggle symbols)
 
   ;; Home row mods (https://precondition.github.io/home-row-mods)
   hra (tap-hold-next-release 200 a lctl)
-  hrr (tap-hold-next-release 200 r lalt)
-  hrs (tap-hold-next-release 200 s lmet)
-  hrt (tap-hold-next-release 200 t lsft)
+  hrs (tap-hold-next-release 200 s lalt)
+  hrd (tap-hold-next-release 200 d lmet)
+  hrf (tap-hold-next-release 200 f lsft)
 
-  hrn (tap-hold-next-release 200 n rsft)
-  hre (tap-hold-next-release 200 e rmet)
-  hri (tap-hold-next-release 200 i lalt)
-  hro (tap-hold-next-release 200 o rctl)
+  hrj (tap-hold-next-release 200 j rsft)
+  hrk (tap-hold-next-release 200 k rmet)
+  hrl (tap-hold-next-release 200 l lalt)
+  hr; (tap-hold-next-release 200 ; rctl)
+
+  hop (tap-hold-next-release 200 S-9 lctl)
+  hcp (tap-hold-next-release 200 S-0 lalt)
+  hob (tap-hold-next-release 200 [ lmet)
+  hcb (tap-hold-next-release 200 ] lsft)
+
+  hos (tap-hold-next-release 200 { rsft)
+  hcs (tap-hold-next-release 200 } rmet)
+  hus (tap-hold-next-release 200 S-- lalt)
+  hpl (tap-hold-next-release 200 + rctl)
 )
 
 (deflayer default
-  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    f14  f15  mctl lp   _    _    prev pp   next mute vold volu
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    q    w    f    p    b    j    l    u    y    ;    _    _    _
-  esc  @hra @hrr @hrs @hrt g    m    @hrn @hre @hri @hro _    _
-  z    x    c    d    v    XX   k    h    _    _    _    _    _
-  @fn  _    _    @sym           _              @ext _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  @esc @hra @hrs @hrd @hrf _    _    @hrj @hrk @hrl @hr; _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  @fn  _    _    _              @sym           @ext _    _    _    _
 )
 
 (deflayer function
-  _    brdn brup mctl _    _    _    prev pp   next mute vold volu
+  _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
   _    _    _    _    _    _    _    _    _    _    _    _    _    del
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _
@@ -56,39 +67,20 @@
   _    _    _    _              _              _    _    home pgdn end
 )
 
-
-(defalias
-  ;; Extend layer (https://dreymar.colemak.org/layers-extend.html)
-  bck M-[
-  fwd M-]
-)
+(deflayer symbols
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  grv  !    @    #    $    %    ^    &    *    -    =    _    _    _
+  ~    @hop @hcp @hob @hcb _    _    @hos @hcs @hus @hpl \    _
+  _    _    _    _    _    _    _    A-1  _    _    _    |    _
+  _    _    _    _              _              _    _    _    _    _
+ )
 
 (deflayer extend
   _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    f1   f2   f3   f4   _    pgup home up   end  del  _    _    _
-  _    lctl lalt lmet lsft @bck pgdn left down rght bspc _    _
-  f5   f6   f7   f8   @fwd XX   _    f9   f10  f11  f12  _    _
+  _    _    _    _    _    _    pgup home up   end  del  _    _    _
+  _    lctl lalt lmet lsft _    pgdn left down rght bspc _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _              _              _    _    _    _    _
  )
-
-(defalias
-  heq (tap-hold-next-release 200 = lctl)
-  has (tap-hold-next-release 200 * lalt)
-  hob (tap-hold-next-release 200 { lmet)
-  hop (tap-hold-next-release 200 S-9 lsft)
-
-  h4 (tap-hold-next-release 200 4 rsft)
-  h5 (tap-hold-next-release 200 5 rmet)
-  h6 (tap-hold-next-release 200 6 lalt)
-  hdq (tap-hold-next-release 200 " rctl)
-)
-
-(deflayer symbols
-  _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  grv  !    @    #    $    %    ^    7    8    9    '    _    _    _
-  ~    @heq @has @hob @hop [    -    @h4  @h5  @h6  @hdq _    _
-  +    &    }    S-0  ]    XX   S--  1    2    3    \    |    _
-  _    _    _    _              _              0    _    _    _    _
-)
