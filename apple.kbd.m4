@@ -22,31 +22,26 @@
 
 
 (defalias
-  esc (tap-hold-next-release 200 esc lctl)
+  esc (tap-hold-next-release 200 esc lalt)
   fn (around (layer-toggle function) fn)
   sym (tap-hold-next-release 200 spc (layer-toggle symbols))
   ext (layer-toggle extend)
 
   ;; Home row mods (https://precondition.github.io/home-row-mods)
   hra (tap-hold-next-release 200 a lctl)
-  hrs (tap-hold-next-release 200 s lalt)
+  hrs (tap-hold-next-release 200 s ralt)
   hrd (tap-hold-next-release 200 d lmet)
   hrf (tap-hold-next-release 200 f lsft)
 
   hrj (tap-hold-next-release 200 j rsft)
   hrk (tap-hold-next-release 200 k rmet)
-  hrl (tap-hold-next-release 200 l lalt)
+  hrl (tap-hold-next-release 200 l ralt)
   hr; (tap-hold-next-release 200 ; rctl)
 
-  hop (tap-hold-next-release 200 S-9 lctl)
-  hcp (tap-hold-next-release 200 S-0 lalt)
-  hob (tap-hold-next-release 200 [ lmet)
-  hcb (tap-hold-next-release 200 ] lsft)
-
-  hos (tap-hold-next-release 200 { rsft)
-  hcs (tap-hold-next-release 200 } rmet)
-  hus (tap-hold-next-release 200 S-- lalt)
-  hpl (tap-hold-next-release 200 + rctl)
+  hob (tap-hold-next-release 200 [ rsft)
+  hcb (tap-hold-next-release 200 ] rmet)
+  hmn (tap-hold-next-release 200 - ralt)
+  heq (tap-hold-next-release 200 = rctl)
 )
 
 (deflayer default
@@ -70,9 +65,9 @@
 (deflayer symbols
   _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  grv  !    @    #    $    %    ^    &    *    -    =    _    _    _
-  ~    @hop @hcp @hob @hcb _    _    @hos @hcs @hus @hpl \    _
-  _    _    _    _    _    _    _    A-1  _    _    _    |    _
+  grv  !    @    #    $    %    ^    &    *    S-9  S-0  bspc _    _
+  ~    lctl ralt lmet lsft _    _    @hob @hcb @hmn @heq \    _
+  _    _    _    _    _    _    _    {    }    S--  +    |    _
   _    _    _    _              _              _    _    _    _    _
  )
 
@@ -81,6 +76,6 @@
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    pgup home up   end  del  _    _    _
   _    lctl lalt lmet lsft _    pgdn left down rght bspc _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    M-z  M-x  M-c  M-v  _    _    _    _    _    _    _    _
   _    _    _    _              _              _    _    _    _    _
  )
