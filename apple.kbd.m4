@@ -64,18 +64,18 @@
 
 (deflayer symbols
   _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  grv  !    @    #    $    %    ^    &    *    S-9  S-0  bspc _    _
-  ~    lctl ralt lmet lsft _    _    @hob @hcb @hmn @heq \    _
-  _    _    _    _    _    _    _    {    }    S--  +    |    _
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    XX
+  _    lctl ralt lmet lsft XX   XX   rsft rmet ralt rctl \    _
+  _    XX   XX   XX   XX   XX   XX   [    ]    _    _    _    _
   _    _    _    _              _              _    _    _    _    _
  )
 
 (deflayer extend
   _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    pgup home up   end  del  _    _    _
-  _    lctl lalt lmet lsft _    pgdn left down rght bspc _    _
-  _    M-z  M-x  M-c  M-v  _    _    _    _    _    _    _    _
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  _    XX   XX   XX   XX   XX   pgup home up   end  del  XX   XX   XX
+  _    lctl lalt lmet lsft XX   pgdn left down rght bspc XX   _
+  _    M-z  M-x  M-c  M-v  XX   XX   XX   XX   XX   XX   _    _
   _    _    _    _              _              _    _    _    _    _
  )
