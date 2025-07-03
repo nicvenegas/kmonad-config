@@ -8,7 +8,8 @@ opts="shell='${PLUGINSDIR}/$(basename "$0")' | terminal=true | refresh=true"
 
 if [[ -z "$1" ]]; then
   sleep "${SLEEP}"
-  echo "⌃⌥⌘⇧"
+  echo "⌥"
+  # echo "⌃⌥⌘⇧"
   echo "---"
 
   config=$(pgrep -lf 'sudo kmonad' | cut -w -f 6)
