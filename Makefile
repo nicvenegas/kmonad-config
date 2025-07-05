@@ -11,7 +11,7 @@ apple.kbd:
 	kmonad --dry-run "$@"
 
 magic-keyboard.kbd:
-	m4 -D __NAME__='Magic Keyboard' "$<" > "$@"
+	m4 -D __NAME__='Magic Keyboard (nvenegas)' "$<" > "$@"
 	kmonad --dry-run "$@"
 
 $(PLUGIN): $(PLUGINSRC)
